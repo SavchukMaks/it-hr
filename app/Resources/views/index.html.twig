@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114782334-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114782334-1');
+    </script>
+    <title>{{ page.title |raw}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ page.description |raw}}">
+    <meta name="keywords" content="{{ page.keywords |raw}}">
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="{{asset ('css/bundle.css')}} ">
+    <link rel="stylesheet" href="{{asset ('css/hody-icons.css')}} ">
+    <link rel="stylesheet" href="{{asset ('css/style.css')}}">
+    <link href="{{asset ('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700|Source+Sans+Pro:300,400|Kaushan+Script|Lora|Playfair+Display:700') }}" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <!-- Preloader-->
+    {#<div id="loader">#}
+      {#<div class="centrize">#}
+        {#<div class="v-center">#}
+          {#<div id="mask">#}
+            {#<svg class="preloader-icon" width="34" height="38" viewbox="0 0 34 38">#}
+              {#<path class="preloader-path" stroke-dashoffset="0" d="M29.437 8.114L19.35 2.132c-1.473-.86-3.207-.86-4.68 0L4.153 8.114C2.68 8.974 1.5 10.56 1.5 12.28v11.964c0 1.718 1.22 3.306 2.69 4.165l10.404 5.98c1.47.86 3.362.86 4.834 0l9.97-5.98c1.472-.86 2.102-2.45 2.102-4.168V12.28c0-1.72-.59-3.306-2.063-4.166z"></path>#}
+            {#</svg>#}
+          {#</div>#}
+        {#</div>#}
+      {#</div>#}
+    {#</div>#}
+    <!-- End Preloader-->
+    <div id="wrapper">
+      <nav id="navbar">
+        <div class="navbar-wrapper">
+          <div class="container">
+            <div class="logo">
+              <a href="/">
+                <img class="logo-light" src=" /images/logo-light-red.png" alt="">
+                <img class="logo-dark" src="/images/logo-dark-red.png" alt="">
+              </a>
+            </div>
+                {{ render(controller('AppBundle:Menu:viewMenu')) }}
+          </div>
+        </div>
+      </nav>
+      <section>
+        <div id="home-slider">
+          <div class="slide-item">
+            <img src="/images/index-table-top-red.jpg" alt="">
+            <div class="slide-wrap">
+              <div class="slide-content">
+                <div class="container">
+                  <h1>{{ page.block1 |raw}}</h1>
+                  <h4>{{ page.block2 |raw}}</h4>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {#<div class="slide-item">#}
+            {#<img src="/images/index-hr-top1-red.png"  alt="">#}
+            {#<div class="slide-wrap">#}
+              {#<div class="slide-content">#}
+                {#<div class="container">#}
+                  {#<h1>{{ page.block3 |raw}}</h1>#}
+                  {#<h4>{{ page.block4 |raw}}</h4>#}
+                  {#</p>#}
+                {#</div>#}
+              {#</div>#}
+            {#</div>#}
+          {#</div>#}
+        </div>
+      </section>
+      <section class="b-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="title text-center">
+                <h6>{{ page.block5 |raw}}</h6>
+                <p class="fw-300">{{ page.block6 |raw}}</p>
+              </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="split-section">
+        <div class="side-background">
+          <div class="col-md-6 col-sm-4 img-side img-right">
+            <div class="img-holder">
+              <img class="bg-img" src="/images/index-middle-table-red.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-sm-7 col-md-5">
+            <div class="row">
+              <div class="title">
+                <h2 data-bigletter="H">{{ page.block8 |raw}}</h2>
+                <h4>{{ page.block9 |raw}}</h4>
+              </div>
+              <div class="section-content pt-15 pb-15">
+                <div class="icon-box-side">
+                  <div class="animated-icon colored" data-icon="/images/icons/layers-alt.svg"></div>
+                  <h4>{{ page.block10 |raw}}</h4>
+                  <p>{{ page.block11 |raw}}</p>
+                </div>
+                <div class="icon-box-side">
+                  <div class="animated-icon colored" data-icon="/images/icons/layers-alt.svg"></div>
+                  <h4>{{ page.block12 |raw}}</h4>
+                  <p>{{ page.block13 |raw}}</p>
+                </div>
+                <div class="icon-box-side">
+                  <div class="animated-icon colored" data-icon="/images/icons/layers-alt.svg"></div>
+                  <h4>{{ page.block14 |raw}}</h4>
+                  <p>{{ page.block15 |raw}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="split-section">
+        <div class="side-background">
+          <div class="col-md-6 col-sm-4 img-side img-left">
+            <div class="img-holder">
+              <img class="bg-img" src="/images/index-middle-engaged1-red.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="col-md-5 col-sm-7 col-md-offset-7 col-sm-offset-5">
+            <div class="title">
+              <h2 data-bigletter="O">{{ page.block16 |raw}}</h2>
+              <h4>{{ page.block17 |raw}}</h4>
+            </div>
+            <div class="section-content pt-25 pb-25">
+              <ul class="accordion" data-open-first="true">
+                <li>
+                  <div class="accordion-title">
+                    <h4>{{ page.block18|raw}}</h4>
+                  </div>
+                  <div class="accordion-content">
+                    <p>{{ page.block19 |raw}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="accordion-title">
+                    <h4>{{ page.block20 |raw}}</h4>
+                  </div>
+                  <div class="accordion-content">
+                    <p>{{ page.block21 |raw}}</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="accordion-title">
+                    <h4>{{ page.block22 |raw}}</h4>
+                  </div>
+                  <div class="accordion-content">
+                    <p>{{ page.block23 |raw}}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {#<section class="parallax-section">#}
+        {#<div class="row-parallax-bg">#}
+          {#<div class="parallax-wrapper">#}
+            {#<div class="parallax-bg" style="background-position: center ">#}
+              {#<img src="/images/index-bottom-arms.jpg" alt="">#}
+            {#</div>#}
+            {#<div class="parallax-overlay"></div>#}
+          {#</div>#}
+        {#</div>#}
+        {#<div class="container">#}
+          {#<div class="row">#}
+          {#<div class="col-md-8 ">#}
+              {#<div class="title txt-sm-center">#}
+                {#<h2 data-bigletter="П">{{ page.block30 |raw}}</h2>#}
+            {#</div>#}
+          {#</div>#}
+        {#</div>#}
+      {#</section>#}
+        {% include 'footer.html.twig' %}
+    </div>
+    <script type="text/javascript" src="{{asset ('js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{asset ('js/bundle.js') }}"></script>
+    <script type="text/javascript" src="{{asset ('js/SmoothScroll.js') }}"></script>
+    <script type="text/javascript" src="{{asset ('js/jquery.mb.YTPlayer.js') }}"></script>
+    <script type="text/javascript" src="{{asset ('js/main.js') }}"></script>
+  </body>
+
+</html>

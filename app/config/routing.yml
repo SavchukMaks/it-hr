@@ -1,0 +1,35 @@
+#app:
+#    resource: '@AppBundle/Controller/'
+#    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+admin_area:
+        resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+        prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+    
+app_vacancy_list:
+    path:     /{_locale}/vacancies
+    controller: AppBundle\Controller\VacancyController::listAction
+
+app_vacancy_show:
+    path:     /{_locale}/vacancy/{id}
+    controller: AppBundle\Controller\VacancyController::showAction
+
+app_post_list:
+    path:     /{_locale}/blog
+    controller: AppBundle\Controller\PostController::listAction
+
+app_post_show:
+    path:     /{_locale}/post/{id}
+    controller: AppBundle\Controller\PostController::showAction
+
+app_page_view:
+    path:     /{_locale}/{urlKey}
+    defaults:  { _controller: AppBundle:Page:view, _locale: ru, urlKey: home }
+

@@ -1,0 +1,19 @@
+            <div class="menu-extras">
+                  <div class="menu-item">
+                        <div class="header-socials">
+                                  <ul>
+                                    <li><a target="_blank" href="/ru/home">RU</a> </li>
+                                    <li><a target="_blank" href="/en/home">EN</a></li>
+                                  </ul>
+                            </div>
+                      </div>
+                </div>
+<div id="navigation">
+    <ul class="navigation-menu nav">
+        {% for item in menus %}
+            <li class=" has-megamenu">
+                <a href="/{{ app.request.attributes.get('_locale') }}/{{ item.urlKey }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
